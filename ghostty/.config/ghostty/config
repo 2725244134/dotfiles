@@ -1,0 +1,85 @@
+# ===
+# === 基本设置
+# ===
+
+font-family = Maple Mono Normal NL NF CN
+font-size = 14.6
+cursor-style = block
+shell-integration-features = no-cursor
+copy-on-select = clipboard
+mouse-hide-while-typing = true
+confirm-close-surface = false
+custom-shader = "~/.config/ghostty/shaders/cursor_smear.glsl"
+command = fish
+
+# ===
+# === 主题
+# ===
+
+window-decoration = false
+theme = wezterm-mocha
+
+# ===
+# === 背景
+# ===
+
+background-opacity = 1
+background-image = ~/.config/ghostty/themes/youi.jpg
+background-image-opacity = 0.10
+background-image-position = center
+background-image-fit = cover
+
+# ===
+# === 快捷键 (从 WezTerm 迁移, Linux 下使用 ALT 作为主修饰键)
+# ===
+
+# 全局快捷键 (Wayland 下由 niri 处理，见 ~/.config/niri/config.kdl)
+keybind = global:ctrl+space=toggle_quick_terminal
+
+# 复制粘贴
+keybind = ctrl+shift+c=copy_to_clipboard
+keybind = ctrl+shift+v=paste_from_clipboard
+
+# 全屏
+keybind = f11=toggle_fullscreen
+
+# 标签页操作
+keybind = alt+t=new_tab
+keybind = alt+w=close_surface
+keybind = alt+ctrl+w=close_tab
+keybind = alt+[=previous_tab
+keybind = alt+]=next_tab
+keybind = alt+ctrl+[=move_tab:-1
+keybind = alt+ctrl+]=move_tab:1
+
+# 窗口操作
+keybind = alt+n=new_window
+
+# 分屏操作
+keybind = alt+\=new_split:right
+keybind = alt+ctrl+\=new_split:down
+keybind = alt+enter=toggle_split_zoom
+keybind = alt+x=close_surface
+
+# 分屏导航
+keybind = alt+up=goto_split:up
+keybind = alt+down=goto_split:down
+keybind = alt+left=goto_split:left
+keybind = alt+right=goto_split:right
+
+# 滚动
+keybind = alt+u=scroll_page_lines:-5
+keybind = alt+d=scroll_page_lines:5
+keybind = page_up=scroll_page_up
+keybind = page_down=scroll_page_down
+
+# 字体大小
+keybind = alt+ctrl+equal=increase_font_size:1
+keybind = alt+ctrl+minus=decrease_font_size:1
+keybind = alt+ctrl+zero=reset_font_size
+
+# 分屏大小调整
+keybind = alt+shift+up=resize_split:up,10
+keybind = alt+shift+down=resize_split:down,10
+keybind = alt+shift+left=resize_split:left,10
+keybind = alt+shift+right=resize_split:right,10

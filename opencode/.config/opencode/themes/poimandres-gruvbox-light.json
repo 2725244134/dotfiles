@@ -1,0 +1,252 @@
+{
+  "$schema": "https://opencode.ai/theme.json",
+  "defs": {
+    "transparent": "#00000000",
+    "gruvboxLightBg": "#fbf1c7",
+    "gruvboxLightFg": "#7c6f64",
+    "gruvboxLightBgHard": "#f9f5d7",
+    "gruvboxLightBgSoft": "#f2e5bc",
+    "gruvboxLightRed": "#cc241d",
+    "gruvboxLightGreen": "#98971a",
+    "gruvboxLightYellow": "#d79921",
+    "gruvboxLightBlue": "#458588",
+    "gruvboxLightPurple": "#b16286",
+    "gruvboxLightAqua": "#689d6a",
+    "gruvboxLightOrange": "#d65d0e",
+    "gruvboxLightGray": "#a89984",
+    "gruvboxLightDark": "#3c3836",
+    "gruvboxLightRedFaded": "#9d0006",
+    "gruvboxLightGreenFaded": "#79740e",
+    "gruvboxLightYellowFaded": "#b57614",
+    "gruvboxLightBlueFaded": "#076678",
+    "gruvboxLightPurpleFaded": "#8f3f71",
+    "gruvboxLightAquaFaded": "#427b58",
+    "gruvboxLightOrangeFaded": "#af3a03"
+  },
+  "theme": {
+    "primary": {
+      "dark": "gruvboxLightBlue",
+      "light": "gruvboxLightBlue"
+    },
+    "secondary": {
+      "dark": "gruvboxLightPurple",
+      "light": "gruvboxLightPurple"
+    },
+    "accent": {
+      "dark": "gruvboxLightAqua",
+      "light": "gruvboxLightAqua"
+    },
+    "error": {
+      "dark": "gruvboxLightRed",
+      "light": "gruvboxLightRed"
+    },
+    "warning": {
+      "dark": "gruvboxLightYellow",
+      "light": "gruvboxLightYellow"
+    },
+    "success": {
+      "dark": "gruvboxLightGreen",
+      "light": "gruvboxLightGreen"
+    },
+    "info": {
+      "dark": "gruvboxLightBlue",
+      "light": "gruvboxLightBlue"
+    },
+    "text": {
+      "dark": "gruvboxLightFg",
+      "light": "gruvboxLightFg"
+    },
+    "textMuted": {
+      "dark": "gruvboxLightGray",
+      "light": "gruvboxLightGray"
+    },
+    "background": {
+      "dark": "transparent",
+      "light": "transparent"
+    },
+    "backgroundPanel": {
+      "dark": "gruvboxLightBgSoft",
+      "light": "gruvboxLightBgSoft"
+    },
+    "backgroundElement": {
+      "dark": "gruvboxLightBg",
+      "light": "gruvboxLightBg"
+    },
+    "border": {
+      "dark": "gruvboxLightGray",
+      "light": "gruvboxLightGray"
+    },
+    "borderActive": {
+      "dark": "gruvboxLightFg",
+      "light": "gruvboxLightFg"
+    },
+    "borderSubtle": {
+      "dark": "gruvboxLightGray",
+      "light": "gruvboxLightGray"
+    },
+    "diffAdded": {
+      "dark": "gruvboxLightGreen",
+      "light": "gruvboxLightGreen"
+    },
+    "diffRemoved": {
+      "dark": "gruvboxLightRed",
+      "light": "gruvboxLightRed"
+    },
+    "diffContext": {
+      "dark": "gruvboxLightGray",
+      "light": "gruvboxLightGray"
+    },
+    "diffHunkHeader": {
+      "dark": "gruvboxLightFg",
+      "light": "gruvboxLightFg"
+    },
+    "diffHighlightAdded": {
+      "dark": "gruvboxLightGreenFaded",
+      "light": "gruvboxLightGreenFaded"
+    },
+    "diffHighlightRemoved": {
+      "dark": "gruvboxLightRedFaded",
+      "light": "gruvboxLightRedFaded"
+    },
+    "diffAddedBg": {
+      "dark": "gruvboxLightBgSoft",
+      "light": "gruvboxLightBgSoft"
+    },
+    "diffRemovedBg": {
+      "dark": "gruvboxLightBgSoft",
+      "light": "gruvboxLightBgSoft"
+    },
+    "diffContextBg": {
+      "dark": "gruvboxLightBg",
+      "light": "gruvboxLightBg"
+    },
+    "diffLineNumber": {
+      "dark": "gruvboxLightGray",
+      "light": "gruvboxLightGray"
+    },
+    "diffAddedLineNumberBg": {
+      "dark": "gruvboxLightBgSoft",
+      "light": "gruvboxLightBgSoft"
+    },
+    "diffRemovedLineNumberBg": {
+      "dark": "gruvboxLightBgSoft",
+      "light": "gruvboxLightBgSoft"
+    },
+    "markdownText": {
+      "dark": "gruvboxLightFg",
+      "light": "gruvboxLightFg"
+    },
+    "markdownHeading": {
+      "dark": "gruvboxLightBlue",
+      "light": "gruvboxLightBlue"
+    },
+    "markdownLink": {
+      "dark": "gruvboxLightPurple",
+      "light": "gruvboxLightPurple"
+    },
+    "markdownLinkText": {
+      "dark": "gruvboxLightAqua",
+      "light": "gruvboxLightAqua"
+    },
+    "markdownCode": {
+      "dark": "gruvboxLightPurple",
+      "light": "gruvboxLightPurple"
+    },
+    "markdownBlockQuote": {
+      "dark": "gruvboxLightGray",
+      "light": "gruvboxLightGray"
+    },
+    "markdownEmph": {
+      "dark": "gruvboxLightPurpleFaded",
+      "light": "gruvboxLightPurpleFaded"
+    },
+    "markdownStrong": {
+      "dark": "gruvboxLightYellow",
+      "light": "gruvboxLightYellow"
+    },
+    "markdownHorizontalRule": {
+      "dark": "gruvboxLightGray",
+      "light": "gruvboxLightGray"
+    },
+    "markdownListItem": {
+      "dark": "gruvboxLightBlue",
+      "light": "gruvboxLightBlue"
+    },
+    "markdownListEnumeration": {
+      "dark": "gruvboxLightAqua",
+      "light": "gruvboxLightAqua"
+    },
+    "markdownImage": {
+      "dark": "gruvboxLightPurple",
+      "light": "gruvboxLightPurple"
+    },
+    "markdownImageText": {
+      "dark": "gruvboxLightAqua",
+      "light": "gruvboxLightAqua"
+    },
+    "markdownCodeBlock": {
+      "dark": "gruvboxLightFg",
+      "light": "gruvboxLightFg"
+    },
+    "syntaxComment": {
+      "dark": "gruvboxLightGray",
+      "light": "gruvboxLightGray"
+    },
+    "syntaxKeyword": {
+      "dark": "gruvboxLightPurple",
+      "light": "gruvboxLightPurple"
+    },
+    "syntaxFunction": {
+      "dark": "gruvboxLightBlue",
+      "light": "gruvboxLightBlue"
+    },
+    "syntaxVariable": {
+      "dark": "gruvboxLightAqua",
+      "light": "gruvboxLightAqua"
+    },
+    "syntaxString": {
+      "dark": "gruvboxLightGreen",
+      "light": "gruvboxLightGreen"
+    },
+    "syntaxNumber": {
+      "dark": "gruvboxLightOrange",
+      "light": "gruvboxLightOrange"
+    },
+    "syntaxType": {
+      "dark": "gruvboxLightAqua",
+      "light": "gruvboxLightAqua"
+    },
+    "syntaxOperator": {
+      "dark": "gruvboxLightPurple",
+      "light": "gruvboxLightPurple"
+    },
+    "syntaxPunctuation": {
+      "dark": "gruvboxLightFg",
+      "light": "gruvboxLightFg"
+    },
+    "inputBackground": {
+      "dark": "transparent",
+      "light": "transparent"
+    },
+    "InputBorder": {
+      "dark": "gruvboxLightAqua",
+      "light": "gruvboxLightAqua"
+    },
+    "InputBorderActive": {
+      "dark": "gruvboxLightGreen",
+      "light": "gruvboxLightGreen"
+    },
+    "inputPrompt": {
+      "dark": "gruvboxLightAqua",
+      "light": "gruvboxLightAqua"
+    },
+    "inputCursor": {
+      "dark": "gruvboxLightFg",
+      "light": "gruvboxLightFg"
+    },
+    "inputText": {
+      "dark": "gruvboxLightFg",
+      "light": "gruvboxLightFg"
+    }
+  }
+}

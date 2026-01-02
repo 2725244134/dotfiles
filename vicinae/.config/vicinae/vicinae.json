@@ -1,0 +1,25 @@
+{
+    "closeOnFocusLoss": true,
+    "considerPreedit": false,
+    "faviconService": "twenty",
+    "font": {
+        "normal": "Maple Mono Normal NL NF CN Medium",
+        "size": 12
+    },
+    "keybinding": "default",
+    "keybinds": {
+    },
+    "popToRootOnClose": false,
+    "rootSearch": {
+        "searchFiles": true
+    },
+    "theme": {
+        "iconTheme": "Kora Light Panel",
+        "name": "gruvbox-light"
+    },
+    "window": {
+        "csd": true,
+        "opacity": 0.95,
+        "rounding": 10
+    }
+}
