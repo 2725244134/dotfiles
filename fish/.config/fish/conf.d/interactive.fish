@@ -15,7 +15,7 @@ if command -q zoxide
 end
 
 # FZF - Fuzzy finder keybindings (Alt+F for directory, Alt+V for variables)
-if command -q fzf
+if type -q fzf_configure_bindings
     fzf_configure_bindings --directory=\ef --variables=\ev
 end
 
