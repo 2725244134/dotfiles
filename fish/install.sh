@@ -2,8 +2,6 @@
 
 set -e
 
-SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-
 echo "🐟 Setting up Fish shell..."
 
 if ! command -v fish &> /dev/null; then
@@ -12,9 +10,11 @@ if ! command -v fish &> /dev/null; then
     exit 1
 fi
 
-echo "📦 Symlinking fish config..."
-mkdir -p ~/.config
-ln -sf "$SCRIPT_DIR/.config/fish" ~/.config/fish
+if [ ! -f ~/.config/fish/fish_plugins ]; then
+    echo "❌ Error: fish config not found at ~/.config/fish"
+    echo "Run 'stow fish' first to symlink the config"
+    exit 1
+fi
 
 echo "📦 Installing fisher..."
 fish -c "curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher"
