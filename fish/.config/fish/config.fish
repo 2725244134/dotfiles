@@ -5,7 +5,7 @@
 #
 ### PRIVATE CONFIGURATION
 #
-
+set -g fish_greeting "i love you so"
 # Load private config (local settings or computer-specific config)
 if test -f $HOME/.config/fish/private.fish
     source $HOME/.config/fish/private.fish

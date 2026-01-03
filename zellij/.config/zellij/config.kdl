@@ -1,0 +1,10 @@
+// Zellij config - minimal with plugins
+
+theme "rose-pine-moon"
+mouse_mode true
+copy_on_select true
+scroll_buffer_size 10000
+session_serialization true
+pane_frames true
+
+// multitask: run `zm` inside zellij to start

@@ -45,14 +45,14 @@ keybind = f11=toggle_fullscreen
 
 # 标签页操作
 keybind = alt+t=new_tab
-keybind = alt+ctrl+w=close_tab
+keybind = alt+w=close_tab
 keybind = alt+[=previous_tab
 keybind = alt+]=next_tab
 keybind = alt+ctrl+[=move_tab:-1
 keybind = alt+ctrl+]=move_tab:1
 
 # 窗口操作
-keybind = alt+n=new_window
+#keybind = alt+1=new_window
 
 # 分屏操作
 keybind = alt+\=new_split:right
