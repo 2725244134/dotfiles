@@ -34,7 +34,7 @@ background-image-fit = cover
 # ===
 
 # 全局快捷键 (Wayland 下由 niri 处理，见 ~/.config/niri/config.kdl)
-keybind = global:ctrl+space=toggle_quick_terminal
+keybind = global:alt+space=toggle_quick_terminal
 
 # 复制粘贴
 keybind = ctrl+shift+c=copy_to_clipboard
@@ -45,7 +45,6 @@ keybind = f11=toggle_fullscreen
 
 # 标签页操作
 keybind = alt+t=new_tab
-keybind = alt+w=close_surface
 keybind = alt+ctrl+w=close_tab
 keybind = alt+[=previous_tab
 keybind = alt+]=next_tab
@@ -68,8 +67,8 @@ keybind = alt+left=goto_split:left
 keybind = alt+right=goto_split:right
 
 # 滚动
-keybind = alt+u=scroll_page_lines:-5
-keybind = alt+d=scroll_page_lines:5
+keybind = ctrl+u=scroll_page_lines:-5
+keybind = ctrl+d=scroll_page_lines:5
 keybind = page_up=scroll_page_up
 keybind = page_down=scroll_page_down
 
@@ -79,7 +78,7 @@ keybind = alt+ctrl+minus=decrease_font_size:1
 keybind = alt+ctrl+zero=reset_font_size
 
 # 分屏大小调整
-keybind = alt+shift+up=resize_split:up,10
-keybind = alt+shift+down=resize_split:down,10
-keybind = alt+shift+left=resize_split:left,10
-keybind = alt+shift+right=resize_split:right,10
+keybind = alt+ctrl+up=resize_split:up,10
+keybind = alt+ctrl+down=resize_split:down,10
+keybind = alt+ctrl+left=resize_split:left,10
+keybind = alt+ctrl+right=resize_split:right,10

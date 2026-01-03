@@ -10,3 +10,12 @@ alias ssh_tunnel_bg="ssh -f -N"
 alias who8080="lsof -i tcp:8080"
 alias getPID="ps -p"
 alias unset="set --erase"
+
+# tmux
+alias t="tmux a || tmux new -s main"
+alias ta="tmux a"
+alias td="tmux detach"
+alias tl="tmux ls"
+alias tn="tmux new -s"
+alias tk="tmux kill-session -t"
+alias tka="tmux kill-server"
