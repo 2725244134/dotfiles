@@ -10,3 +10,15 @@ private.fish
 # fish generated files
 fishd*
 fish_variables
+
+# fisher managed plugins (keep fish_plugins, ignore installed files)
+functions/fisher.fish
+completions/fisher.fish
+functions/_autopair_*.fish
+conf.d/autopair.fish
+functions/__abbr_tips_*.fish
+conf.d/abbr_tips.fish
+functions/_fzf_*.fish
+functions/fzf_configure_bindings.fish
+completions/fzf_configure_bindings.fish
+conf.d/fzf.fish
