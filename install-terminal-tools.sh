@@ -21,7 +21,7 @@ TOOLS=(
   "curl"
   "wget"
   "stow"
-  "tmux"
+  "zellij"
   "starship"
 )
 
@@ -54,20 +54,20 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
   fish -c "fisher list"
 fi
 
-echo ""
-echo "=== Setting up tmux (Oh my tmux!) ==="
-echo ""
+#echo ""
+#echo "=== Setting up tmux (Oh my tmux!) ==="
+#echo ""
 
-read -p "Setup tmux (oh-my-tmux)? [y/N] " -n 1 -r
-echo ""
-if [[ $REPLY =~ ^[Yy]$ ]]; then
-  echo "📦 Installing Oh my tmux!..."
-  curl -fsSL "https://github.com/gpakosz/.tmux/raw/refs/heads/master/install.sh" | bash
+#read -p "Setup tmux (oh-my-tmux)? [y/N] " -n 1 -r
+#echo ""
+#if [[ $REPLY =~ ^[Yy]$ ]]; then
+#  echo "📦 Installing Oh my tmux!..."
+#  curl -fsSL "https://github.com/gpakosz/.tmux/raw/refs/heads/master/install.sh" | bash
 
-  echo "📁 Stowing tmux config..."
-  rm -f "${XDG_CONFIG_HOME:-$HOME/.config}/tmux/tmux.conf.local"
-  stow tmux
-fi
+#  echo "📁 Stowing tmux config..."
+#  rm -f "${XDG_CONFIG_HOME:-$HOME/.config}/tmux/tmux.conf.local"
+#  stow tmux
+#fi
 
 echo ""
 echo "=== Done ==="

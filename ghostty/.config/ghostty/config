@@ -67,8 +67,8 @@ keybind = alt+left=goto_split:left
 keybind = alt+right=goto_split:right
 
 # 滚动
-keybind = ctrl+u=scroll_page_lines:-5
-keybind = ctrl+d=scroll_page_lines:5
+#keybind = ctrl+u=scroll_page_lines:-5
+#keybind = ctrl+d=scroll_page_lines:5
 keybind = page_up=scroll_page_up
 keybind = page_down=scroll_page_down
 
