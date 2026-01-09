@@ -11,6 +11,7 @@ mouse-hide-while-typing = true
 confirm-close-surface = false
 custom-shader = "~/.config/ghostty/shaders/cursor_smear.glsl"
 command = fish
+gtk-custom-css = ~/.config/ghostty/tabs.css
 
 # ===
 # === 主题
@@ -30,18 +31,14 @@ background-image-position = center
 background-image-fit = cover
 
 # ===
-# === 快捷键 (从 WezTerm 迁移, Linux 下使用 ALT 作为主修饰键)
 # ===
 
-# 全局快捷键 (Wayland 下由 niri 处理，见 ~/.config/niri/config.kdl)
 keybind = global:alt+space=toggle_quick_terminal
 
 # 复制粘贴
 keybind = ctrl+shift+c=copy_to_clipboard
 keybind = ctrl+shift+v=paste_from_clipboard
 
-# 全屏
-keybind = f11=toggle_fullscreen
 
 # 标签页操作
 keybind = alt+t=new_tab
@@ -51,8 +48,6 @@ keybind = alt+]=next_tab
 keybind = alt+ctrl+[=move_tab:-1
 keybind = alt+ctrl+]=move_tab:1
 
-# 窗口操作
-#keybind = alt+1=new_window
 
 # 分屏操作
 keybind = alt+\=new_split:right

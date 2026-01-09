@@ -1,0 +1,37 @@
+[user]
+	email = 2725244134@qq.com
+	name = baiye
+[credential]
+	helper = store
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+
+[core]
+	pager = delta
+
+[interactive]
+	diffFilter = delta --color-only
+
+[delta]
+	navigate = true
+	side-by-side = true
+	line-numbers = true
+	syntax-theme = Dracula
+	plus-style = syntax "#2a4a3e"
+	minus-style = syntax "#4a2a3e"
+	plus-emph-style = syntax "#3a6a5e"
+	minus-emph-style = syntax "#6a3a4e"
+	line-numbers-plus-style = "#50fa7b"
+	line-numbers-minus-style = "#ff5555"
+	hunk-header-style = file line-number syntax
+	file-style = bold yellow ul
+	file-decoration-style = none
+
+[merge]
+	conflictstyle = diff3
+
+[diff]
+	colorMoved = default

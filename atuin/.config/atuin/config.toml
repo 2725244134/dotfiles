@@ -1,0 +1,71 @@
+# Atuin Configuration
+# https://docs.atuin.sh/configuration/config/
+
+## General Settings
+# 更新检查
+update_check = true
+# 自动同步
+auto_sync = true
+# 同步频率 (秒)
+sync_frequency = "5m"
+
+## Search Settings
+# 搜索模式: prefix, fulltext, fuzzy, skim
+search_mode = "fuzzy"
+# 过滤模式: global, host, session, directory
+filter_mode = "global"
+# 工作区过滤模式 (在 git 仓库中时)
+workspaces = true
+# 搜索时过滤掉失败的命令
+filter_mode_shell_up_key_binding = "host"
+
+## UI Settings
+# 内联显示高度
+inline_height = 30
+# 显示预览
+show_preview = true
+# 显示帮助
+show_help = true
+# 显示 tabs
+show_tabs = true
+# 风格: auto, full, compact
+style = "auto"
+# 反向显示结果 (最新的在底部)
+invert = false
+# 时间格式
+timestamps = true
+
+## History Settings
+# 记录命令执行前的目录
+cwd_filter = []
+# 过滤敏感命令
+secrets_filter = true
+# 历史过滤器 (正则表达式)
+history_filter = [
+    "^cd ",
+    "^ls$",
+    "^ll$",
+    "^la$",
+]
+
+## Keybindings
+# 快捷键设置
+enter_accept = false
+
+## Stats
+# 统计设置
+common_subcommands = [
+    "cargo",
+    "go",
+    "git",
+    "npm",
+    "yarn",
+    "pnpm",
+    "docker",
+    "kubectl",
+]
+
+## Sync Settings (可选)
+# 如果使用 atuin server 同步，取消下面的注释并设置
+# sync_address = "https://api.atuin.sh"
+# key_path = "~/.atuin/key"

@@ -376,7 +376,6 @@ binds {
 
     // Suggested binds for running programs: terminal, app launcher, screen locker.
     Alt+1 hotkey-overlay-title="Open a Terminal: Ghostty" { spawn "ghostty"; }
-    Alt+T hotkey-overlay-title="Quick Terminal" { spawn "ghostty" "+quick-terminal"; }
     Alt+v hotkey-overlay-title="Run an Application: vicinae" { spawn-sh "vicinae toggle"; }
 
     Alt+q hotkey-overlay-title="Open a Browser: zen-browser" { spawn "zen-browser"; }
@@ -408,14 +407,10 @@ binds {
 
     Mod+Left  { focus-column-left; }
     Mod+Right { focus-column-right; }
-    Mod+H     { focus-column-left; }
-    Mod+L     { focus-column-right; }
 
     Mod+Ctrl+Left  { move-column-left; }
     Mod+Ctrl+Right { move-column-right; }
-    Mod+Ctrl+H     { move-column-left; }
 
-    Mod+Ctrl+L     { move-column-right; }
 
     // Alternative commands that move across workspaces when reaching
     // the first or last window in a column.
@@ -423,11 +418,6 @@ binds {
     // Mod+K     { focus-window-or-workspace-up; }
     // Mod+Ctrl+J     { move-window-down-or-to-workspace-down; }
     // Mod+Ctrl+K     { move-window-up-or-to-workspace-up; }
-
-    Mod+Home { focus-column-first; }
-    Mod+End  { focus-column-last; }
-    Mod+Ctrl+Home { move-column-to-first; }
-    Mod+Ctrl+End  { move-column-to-last; }
 
 
     // Alternatively, there are commands to move just a single window:
@@ -440,12 +430,8 @@ binds {
 
     Mod+Down      { focus-workspace-down; }
     Mod+Up        { focus-workspace-up; }
-    Mod+U              { focus-workspace-down; }
-    Mod+I              { focus-workspace-up; }
     Mod+Ctrl+Down { move-column-to-workspace-down; }
     Mod+Ctrl+Up   { move-column-to-workspace-up; }
-    Mod+Ctrl+U         { move-column-to-workspace-down; }
-    Mod+Ctrl+I         { move-column-to-workspace-up; }
 
     // Alternatively, there are commands to move just a single window:
     // Mod+Ctrl+Page_Down { move-window-to-workspace-down; }
@@ -453,8 +439,6 @@ binds {
 
     Mod+Shift+Down { move-workspace-down; }
     Mod+Shift+Up   { move-workspace-up; }
-    Mod+Shift+U         { move-workspace-down; }
-    Mod+Shift+I         { move-workspace-up; }
 
     // You can bind mouse wheel scroll ticks using the following syntax.
     // These binds will change direction based on the natural-scroll setting.

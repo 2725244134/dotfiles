@@ -1,7 +1,7 @@
 {
   "plugin": [
     "oh-my-opencode",
-    "opencode-antigravity-auth",
+    "opencode-antigravity-auth@beta",
     "opencode-openai-codex-auth",
   ],
   "provider": {
@@ -11,19 +11,6 @@
       "models": {
         "claude-opus-4-20250514": {
           "name": "Claude Opus 4.5 (Copilot)",
-          "limit": { "context": 200000, "output": 64000 },
-          "modalities": { "input": ["text", "image"], "output": ["text"] }
-        }
-      }
-    },
-    "anthropic": {
-      "name": "Anthropic (第三方)",
-      "api": "anthropic",
-      "env": ["ANTHROPIC_API_KEY"],
-      "options": { "baseURL": "https://pmpjfbhq.cn-nb1.rainapp.top" },
-      "models": {
-        "claude-opus-4-5-20251101": {
-          "name": "Claude Opus 4.5",
           "limit": { "context": 200000, "output": 64000 },
           "modalities": { "input": ["text", "image"], "output": ["text"] }
         }

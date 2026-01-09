@@ -17,7 +17,7 @@
   },
   "terminal": {
     "shell": "system",
-    "dock": "bottom",
+    "dock": "right",
   },
   "pane_split_direction_vertical": "left",
   "active_pane_modifiers": {

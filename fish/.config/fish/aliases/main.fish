@@ -7,7 +7,9 @@ alias ls="eza -l --icons --git --group-directories-first --time-style=relative"
 alias op="opencode"
 alias rm="rm -i"
 alias rmf="rm -rf"
-alias clr="clear"
+alias cl="clear"
+alias zed="zeditor ."
+
 # tmux
 #alias t="tmux a || tmux new -s main"
 #alias ta="tmux a"
@@ -16,3 +18,8 @@ alias clr="clear"
 #alias tn="tmux new -s"
 #alias tk="tmux kill-session -t"
 #alias tka="tmux kill-server"
+alias sf "source ~/.config/fish/config.fish"
+
+# bat - cat with syntax highlighting
+alias cat="bat"
+alias catp="bat --plain"

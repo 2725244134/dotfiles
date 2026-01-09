@@ -1,0 +1,6 @@
+--theme="Catppuccin Mocha"
+--style="numbers,changes,header,grid"
+--italic-text=always
+--map-syntax "*.conf:INI"
+--map-syntax ".ignore:Git Ignore"
+--paging=auto

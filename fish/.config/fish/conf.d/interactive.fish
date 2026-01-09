@@ -24,3 +24,10 @@ end
 if test "$TERM_PROGRAM" = "ghostty"
     set -gx YAZI_ADAPTER kgp
 end
+
+# Atuin - Shell history sync and search (Alt+H to search)
+if command -q atuin
+    atuin init fish --disable-ctrl-r | source
+    bind \eh _atuin_search
+    bind -M insert \eh _atuin_search
+end

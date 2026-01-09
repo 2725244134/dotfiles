@@ -1,5 +1,7 @@
-# Removed risky ESC ESC sudo keybinding - use explicit sudo when needed
-# function fish_user_key_bindings
-#     bind \e\e --mode default 'fish_commandline_prepend sudo'
-#     bind \e\e --mode insert 'fish_commandline_prepend sudo'
-# end
+function fish_user_key_bindings
+    # Atuin: Alt+H for history search (instead of Ctrl+R)
+    if command -q atuin
+        bind \eh _atuin_search
+        bind -M insert \eh _atuin_search
+    end
+end
