@@ -9,7 +9,7 @@ alias rm="rm -i"
 alias rmf="rm -rf"
 alias cl="clear"
 alias zed="zeditor ."
-
+alias lg="lazygit"
 # tmux
 #alias t="tmux a || tmux new -s main"
 #alias ta="tmux a"

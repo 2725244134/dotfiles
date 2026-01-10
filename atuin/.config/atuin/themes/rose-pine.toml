@@ -1,0 +1,33 @@
+# Rosé Pine Theme for Atuin
+# https://rosepinetheme.com/palette
+
+[theme]
+name = "rose-pine"
+
+[colors]
+# Text: #e0def4
+Base = "#e0def4"
+
+# Iris (purple) - titles
+Title = "#c4a7e7"
+
+# Foam (cyan) - info
+AlertInfo = "#9ccfd8"
+
+# Gold - warnings
+AlertWarn = "#f6c177"
+
+# Love (red/pink) - errors
+AlertError = "#eb6f92"
+
+# Subtle - annotations
+Annotation = "#908caa"
+
+# Pine (teal) - guidance/help
+Guidance = "#31748f"
+
+# Rose - important highlights
+Important = "#ebbcba"
+
+# Muted
+Muted = "#6e6a86"
