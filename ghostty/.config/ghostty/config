@@ -31,8 +31,16 @@ background-image-position = center
 background-image-fit = cover
 
 # ===
+# === Quick Terminal (requires Ghostty 1.2.0+, autohide fix in 1.2.3+)
 # ===
-
+quick-terminal-position = center
+quick-terminal-size = 1200px,800px
+#quick-terminal-autohide = true
+# GTK Wayland specific settings (niri supports wlr-layer-shell)
+#gtk-quick-terminal-layer = overlay
+#quick-terminal-keyboard-interactivity = on-demand
+# Note: global: prefix requires XDG desktop portal on Wayland
+# For truly global shortcuts, configure in niri and use: keybind = alt+space=toggle_quick_terminal
 keybind = global:alt+space=toggle_quick_terminal
 
 # 复制粘贴
