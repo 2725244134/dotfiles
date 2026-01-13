@@ -2,8 +2,14 @@
   "plugin": [
     "oh-my-opencode",
     "opencode-antigravity-auth@beta",
-    "opencode-openai-codex-auth",
+    "opencode-mystatus@1.0.1"
   ],
+  "command": {
+    "mystatus": {
+      "description": "Query quota usage for all AI accounts",
+      "template": "Use the mystatus tool to query quota usage. Return the result as-is without modification."
+    }
+  },
   "provider": {
     "copilot": {
       "name": "GitHub Copilot",
