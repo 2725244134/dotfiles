@@ -75,35 +75,24 @@ input {
 // Find more information on the wiki:
 // https://yalter.github.io/niri/Configuration:-Outputs
 // Remember to uncomment the node by removing "/-"!
+// 内置笔记本屏幕 - 放在左边
 output "eDP-1" {
-    // Uncomment this line to disable this output.
-    // off
-
-    // Resolution and, optionally, refresh rate of the output.
-    // The format is "<width>x<height>" or "<width>x<height>@<refresh rate>".
-    // If the refresh rate is omitted, niri will pick the highest refresh rate
-    // for the resolution.
-    // If the mode is omitted altogether or is invalid, niri will pick one automatically.
-    // Run `niri msg outputs` while inside a niri instance to list all outputs and their modes.
-    mode "1980x1080@100"
-
-    // You can use integer or fractional scale, for example use 1.5 for 150% scale.
+    // 2560x1440 @ 60Hz
+    mode "2560x1440@60"
     scale 1
-
-    // Transform allows to rotate the output counter-clockwise, valid values are:
-    // normal, 90, 180, 270, flipped, flipped-90, flipped-180 and flipped-270.
     transform "normal"
+    // 左边起始位置
+    position x=0 y=0
+}
 
-    // Position of the output in the global coordinate space.
-    // This affects directional monitor actions like "focus-monitor-left", and cursor movement.
-    // The cursor can only move between directly adjacent outputs.
-    // Output scale and rotation has to be taken into account for positioning:
-    // outputs are sized in logical, or scaled, pixels.
-    // For example, a 3840×2160 output with scale 2.0 will have a logical size of 1920×1080,
-    // so to put another output directly adjacent to it on the right, set its x to 1920.
-    // If the position is unset or results in an overlap, the output is instead placed
-    // automatically.
-    position x=1280 y=0
+// 外接显示器 - 放在右边
+output "HDMI-A-1" {
+    // 1920x1080 @ 100Hz
+    mode "1920x1080@100"
+    scale 1 
+    transform "normal"
+    // 紧挨着 eDP-1 右侧：2560 (eDP-1的宽度) + 0 = 2560
+    position x=2560 y=0
 }
 
 // Settings that influence how windows are positioned and sized.
@@ -375,7 +364,8 @@ binds {
     Mod+Slash { show-hotkey-overlay; }
 
     // Suggested binds for running programs: terminal, app launcher, screen locker.
-    Alt+1 hotkey-overlay-title="Open a Terminal: Ghostty" { spawn "ghostty"; }
+    Alt+1 hotkey-overlay-title="Open a Terminal: Kitty" { spawn "kitty"; }
+    Alt+Space hotkey-overlay-title="Quick Terminal: Kitty" { spawn "kitten" "quick-access-terminal"; }
     Alt+v hotkey-overlay-title="Run an Application: vicinae" { spawn-sh "vicinae toggle"; }
 
     Alt+q hotkey-overlay-title="Open a Browser: zen-browser" { spawn "zen-browser"; }
@@ -427,6 +417,18 @@ binds {
     // And you can also move a whole workspace to another monitor:
     // Mod+Shift+Ctrl+Left  { move-workspace-to-monitor-left; }
     // ...
+
+    // Monitor navigation (Alt+Super)
+    Alt+Super+Left  { focus-monitor-left; }
+    Alt+Super+Right { focus-monitor-right; }
+    Alt+Super+Down  { focus-monitor-down; }
+    Alt+Super+Up    { focus-monitor-up; }
+
+    // Move column to another monitor (Alt+Super+Ctrl)
+    Alt+Super+Ctrl+Left  { move-column-to-monitor-left; }
+    Alt+Super+Ctrl+Right { move-column-to-monitor-right; }
+    Alt+Super+Ctrl+Down  { move-column-to-monitor-down; }
+    Alt+Super+Ctrl+Up    { move-column-to-monitor-up; }
 
     Mod+Down      { focus-workspace-down; }
     Mod+Up        { focus-workspace-up; }
@@ -591,6 +593,8 @@ environment {
     // https://fcitx-im.org/wiki/Using_Fcitx_5_on_Wayland#Sway
     XMODIFIERS "@im=fcitx"
     QT_IM_MODULES "wayland;fcitx"
+    GTK_CSD "0"
+    QT_WAYLAND_DISABLE_WINDOWDECORATION "1"
     //https_proxy "http//127.0.0.1:7897"
     //http_proxy "http://127.0.0.1:7897"
     //all_proxy "socks5://127.0.0.1:7897"
@@ -613,10 +617,19 @@ window-rule {
     open-floating true
 }
 
+// Kitty Quick Access Terminal (普通窗口模式，由 niri 居中)
+window-rule {
+    match app-id="kitty-quick-access"
+    open-floating true
+    default-column-width { fixed 1200; }
+    default-window-height { fixed 800; }
+}
+
 layer-rule {
     match namespace="^quickshell-overview$"
     place-within-backdrop true
 }
 
-
+spawn-at-startup "vicinae" "server"
 spawn-at-startup "qs" "-c" "noctalia-shell"
+spawn-at-startup "clash-verge"
