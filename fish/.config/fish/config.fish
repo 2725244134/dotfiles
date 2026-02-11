@@ -21,9 +21,6 @@ if test -f $HOME/.config/fish/aliases/main.fish
 end
 
 # Git aliases
-if test -f $HOME/.config/fish/aliases/git.fish
-    source $HOME/.config/fish/aliases/git.fish
-end
 
 if test -f $HOME/.config/fish/aliases/zellij.fish
     source $HOME/.config/fish/aliases/zellij.fish

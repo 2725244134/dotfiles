@@ -311,12 +311,6 @@ window-rule {
     default-column-width {}
 }
 
-window-rule {
-    // This regular expression is intentionally made as specific as possible,
-    // since this is the default config, and we want no false positives.
-    match app-id=r#"^clash-verge$"#
-    default-column-width {}
-}
 // Open the Firefox picture-in-picture player as floating by default.
 window-rule {
     // This app-id regular expression will work for both:
@@ -328,15 +322,6 @@ window-rule {
 
 // Example: block out two password managers from screen capture.
 // (This example rule is commented out with a "/-" in front.)
-/-window-rule {
-    match app-id=r#"^org\.keepassxc\.KeePassXC$"#
-    match app-id=r#"^org\.gnome\.World\.Secrets$"#
-
-    block-out-from "screen-capture"
-
-    // Use this instead if you want them visible on third-party screenshot tools.
-    // block-out-from "screencast"
-}
 
 // Example: enable rounded corners for all windows.
 // (This example rule is commented out with a "/-" in front.)
@@ -593,11 +578,6 @@ environment {
     // https://fcitx-im.org/wiki/Using_Fcitx_5_on_Wayland#Sway
     XMODIFIERS "@im=fcitx"
     QT_IM_MODULES "wayland;fcitx"
-    GTK_CSD "0"
-    QT_WAYLAND_DISABLE_WINDOWDECORATION "1"
-    //https_proxy "http//127.0.0.1:7897"
-    //http_proxy "http://127.0.0.1:7897"
-    //all_proxy "socks5://127.0.0.1:7897"
 }
 
 gestures {
@@ -607,6 +587,7 @@ gestures {
 }
 
 window-rule {
+    
     geometry-corner-radius 20
     clip-to-geometry true
 }
@@ -617,13 +598,20 @@ window-rule {
     open-floating true
 }
 
-// Kitty Quick Access Terminal (普通窗口模式，由 niri 居中)
+// LazyTyper recording bubble: keep it near the bottom instead of centered.
 window-rule {
-    match app-id="kitty-quick-access"
+    match app-id="^LazyTyper$" title="^LazyTyper - Recording$"
     open-floating true
-    default-column-width { fixed 1200; }
-    default-window-height { fixed 800; }
+    // Don't focus the recording bubble when it appears.
+    open-focused false
+    // Increase y to move it upward when relative-to=bottom.
+    default-floating-position x=0 y=140 relative-to="bottom"
+    // Make the quick input bubble larger.
+    min-width 520
+    min-height 56
 }
+
+// Kitty Quick Access Terminal (普通窗口模式，由 niri 居中)
 
 layer-rule {
     match namespace="^quickshell-overview$"
