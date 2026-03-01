@@ -2,94 +2,18 @@
   "plugin": [
     "oh-my-opencode",
     "opencode-antigravity-auth@beta",
-    "opencode-mystatus@1.0.1"
   ],
-  "command": {
-    "mystatus": {
-      "description": "Query quota usage for all AI accounts",
-      "template": "Use the mystatus tool to query quota usage. Return the result as-is without modification."
-    }
-  },
   "provider": {
     "copilot": {
       "name": "GitHub Copilot",
-      "api": "copilot",
       "models": {
         "claude-opus-4-20250514": {
           "name": "Claude Opus 4.5 (Copilot)",
           "limit": { "context": 200000, "output": 64000 },
           "modalities": { "input": ["text", "image"], "output": ["text"] }
-        }
-      }
-    },
-    "google": {
-      "name": "Google",
-      "models": {
-        "gemini-3-pro-high": {
-          "name": "Gemini 3 Pro High (Antigravity)",
-          "thinking": true,
-          "attachment": true,
-          "limit": {
-            "context": 1048576,
-            "output": 65535
-          },
-          "modalities": {
-            "input": ["text", "image", "pdf"],
-            "output": ["text"]
-          }
-        },
-        "gemini-3-pro-medium": {
-          "name": "Gemini 3 Pro Medium (Antigravity)",
-          "thinking": true,
-          "attachment": true,
-          "limit": {
-            "context": 1048576,
-            "output": 65535
-          },
-          "modalities": {
-            "input": ["text", "image", "pdf"],
-            "output": ["text"]
-          }
-        },
-        "gemini-3-pro-low": {
-          "name": "Gemini 3 Pro Low (Antigravity)",
-          "thinking": true,
-          "attachment": true,
-          "limit": {
-            "context": 1048576,
-            "output": 65535
-          },
-          "modalities": {
-            "input": ["text", "image", "pdf"],
-            "output": ["text"]
-          }
-        },
-        "gemini-3-flash": {
-          "name": "Gemini 3 Flash (Antigravity)",
-          "attachment": true,
-          "limit": {
-            "context": 1048576,
-            "output": 65536
-          },
-          "modalities": {
-            "input": ["text", "image", "pdf"],
-            "output": ["text"]
-          }
-        },
-        "gemini-3-flash-lite": {
-          "name": "Gemini 3 Flash Lite (Antigravity)",
-          "attachment": true,
-          "limit": {
-            "context": 1048576,
-            "output": 65536
-          },
-          "modalities": {
-            "input": ["text", "image", "pdf"],
-            "output": ["text"]
-          }
         },
         "claude-sonnet-4-5": {
-          "name": "Claude Sonnet 4.5 (Antigravity)",
+          "name": "Claude Sonnet 4.5 (Copilot)",
           "limit": {
             "context": 200000,
             "output": 64000
@@ -100,7 +24,7 @@
           }
         },
         "claude-sonnet-4-5-thinking-low": {
-          "name": "Claude Sonnet 4.5 Thinking Low (Antigravity)",
+          "name": "Claude Sonnet 4.5 Thinking Low (Copilot)",
           "thinking": true,
           "limit": {
             "context": 200000,
@@ -112,7 +36,7 @@
           }
         },
         "claude-sonnet-4-5-thinking-medium": {
-          "name": "Claude Sonnet 4.5 Thinking Medium (Antigravity)",
+          "name": "Claude Sonnet 4.5 Thinking Medium (Copilot)",
           "thinking": true,
           "limit": {
             "context": 200000,
@@ -124,7 +48,7 @@
           }
         },
         "claude-sonnet-4-5-thinking-high": {
-          "name": "Claude Sonnet 4.5 Thinking High (Antigravity)",
+          "name": "Claude Sonnet 4.5 Thinking High (Copilot)",
           "thinking": true,
           "limit": {
             "context": 200000,
@@ -136,7 +60,7 @@
           }
         },
         "claude-opus-4-5-thinking-low": {
-          "name": "Claude Opus 4.5 Thinking Low (Antigravity)",
+          "name": "Claude Opus 4.5 Thinking Low (Copilot)",
           "thinking": true,
           "limit": {
             "context": 200000,
@@ -148,7 +72,7 @@
           }
         },
         "claude-opus-4-5-thinking-medium": {
-          "name": "Claude Opus 4.5 Thinking Medium (Antigravity)",
+          "name": "Claude Opus 4.5 Thinking Medium (Copilot)",
           "thinking": true,
           "limit": {
             "context": 200000,
@@ -160,22 +84,11 @@
           }
         },
         "claude-opus-4-5-thinking-high": {
-          "name": "Claude Opus 4.5 Thinking High (Antigravity)",
+          "name": "Claude Opus 4.5 Thinking High (Copilot)",
           "thinking": true,
           "limit": {
             "context": 200000,
             "output": 64000
-          },
-          "modalities": {
-            "input": ["text", "image", "pdf"],
-            "output": ["text"]
-          }
-        },
-        "gpt-oss-120b-medium": {
-          "name": "GPT-OSS 120B Medium (Antigravity)",
-          "limit": {
-            "context": 131072,
-            "output": 32768
           },
           "modalities": {
             "input": ["text", "image", "pdf"],

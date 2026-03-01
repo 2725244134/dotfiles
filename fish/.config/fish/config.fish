@@ -25,3 +25,13 @@ end
 if test -f $HOME/.config/fish/aliases/zellij.fish
     source $HOME/.config/fish/aliases/zellij.fish
 end
+
+# pnpm
+set -gx PNPM_HOME "/home/cctop/.local/share/pnpm"
+if not string match -q -- $PNPM_HOME $PATH
+  set -gx PATH "$PNPM_HOME" $PATH
+end
+# pnpm end
+
+# Entire CLI shell completion
+entire completion fish | source
